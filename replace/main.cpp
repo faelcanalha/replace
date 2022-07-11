@@ -82,7 +82,10 @@ home:
 			cout << "    " << dye::grey(get_aobcode) << endl;
 
 			cout << endl << endl << "  [" << dye::yellow("?") << "] " << "Changed Code" << endl;
-			cout << "    " << dye::grey("0x" + regex_replace(get_aobcode, regex("\\ "), ", 0x")) << endl;
+
+			string changed = regex_replace(get_aobcode, regex("\ "), ", 0x");
+			string changed1 = regex_replace(changed, regex("\\dx\\?\\?"), "'?'");
+			cout << "    " << dye::grey("0x" + changed1) << endl;
 
 			cout << endl << "Press any key to back..." << endl;
 			_getch();
