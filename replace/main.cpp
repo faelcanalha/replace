@@ -7,6 +7,7 @@
 #include "Miscellaneous/color.hpp"
 
 using namespace std;
+
 clipboardxx::clipboard clipboard;
 
 int main() {
